@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registrasi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #B3D6BB 46.95%, rgba(179, 214, 187, 0) 100%);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      background-repeat: no-repeat;
+      background-size: cover; 
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 100px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registrasi</h2>
+    <form>
+      <div class="form-group" action="koneksi.php" method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="no_telp">No. Telp</label>
+        <input type="no_telp" id="no_telp" name="no_telp" required>
+      </div>
+      <div class="form-group">
+        <button href="home.html" type="submit">Register</button>
+      </div>
+      <a >
+        <button onclick="location.href='login.html'">Kembali</button>
+      </a>
+    </form>
+  </div>
+</body>
+</html>

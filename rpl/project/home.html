@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>MyRetrash</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #B3D6BB;
+        border: 1px solid #000000;
+      }
+      header {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      main {
+        padding: 20px;
+      }
+      footer {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .menu {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    .menu-item {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .menu-item a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .menu-item a:hover {
+      background-color: #bbb;
+    }
+
+    .container-gambar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #map-container {
+      width: 600px; /* Atur lebar sesuai kebutuhan */
+      margin: 0 auto; /* Mengatur margin menjadi auto untuk memposisikan peta di tengah */
+    }
+    </style>
+    <script>
+      function notifJemput() {
+        alert("Sampah Anda akan diambil");
+      }
+      function notifKertas() {
+        alert("Kertas terpilih");
+      }
+      function notifBotolkaca() {
+        alert("Botol Kaca terpilih");
+      }
+      function notifPlastik() {
+        alert("Plastik terpilih");
+      }
+      function notifElektronik() {
+        alert("Elektronik terpilih");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>My Retrash</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bantuan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontak</a>
+            </li>
+              <a class="container-keluar" href="login.html"><button style="float: right;">Keluar</button></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <h2>Halo Bryan!</h2>
+      <p>Selamat datang di menu!</p>
+    </main>
+    <div class="container-gambar">
+    <img src="sampah.jpeg" alt="Sampah Lucu">
+    </div>
+
+    </div>
+    <center><h3>PICK UP</h3></center>
+    <div class="menu">
+      <div class="menu-item">
+        <a href="#" onclick="notifKertas()">Kertas</a>
+      </div>
+      <div class="menu-item">
+        <a href="#" onclick="notifBotolkaca()">Botol Kaca</a>
+      </div>
+      <div class="menu-item">
+        <a href="#" onclick="notifPlastik()">Plastik</a>
+      </div>
+      <div class="menu-item">
+        <a href="#" onclick="notifElektronik()">Elektronik</a>
+      </div>
+    </div>
+    <div id="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1032.025758946752!2d110.41498415999912!3d-7.782032322288513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599155555555%3A0x536eb168b1dca148!2sUniversitas%20Pembangunan%20Nasional%20%22Veteran%22%20Yogyakarta%20-%20Kampus%202%20Babarsari!5e0!3m2!1sid!2sid!4v1685722365717!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <table>
+      <tr>
+        <td><label for="namapanjang">Nama Panjang:</label></td>
+        <td><input type="text" name="namapanjang" id="namapanjang" required></td>
+      </tr>
+      <tr>
+        <td><label for="jalan">Jalan:</label></td>
+        <td><input type="jalan" name="jalan" id="jalan" required></td>
+      </tr>
+      <tr>
+        <td><label for="message">Alamat lengkap:</label><br></td>
+        <td><textarea name="message" id="message" rows="4" cols="50"></textarea><br><br></td>
+      </tr>
+      
+    </table>
+    <input type="submit" value="Jemput" onclick="notifJemput()">
+  <script>
+    <footer>
+      &copy; 2023 Anjar Jemput Barang. All rights reserved.
+    </footer>
+//</html>
